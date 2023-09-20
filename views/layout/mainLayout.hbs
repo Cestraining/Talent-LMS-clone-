@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    .vc .menu ul {
+        display: flex;
+    }
+
+    .vc .menu .h button {
+        padding: 0.2rem;
+    }
+
+    .vc .menu ul li {
+        list-style: none;
+        margin: 0.5rem 0.7rem;
+    }
+
+    .vc .menu ul a {
+        text-decoration: none;
+        color: black;
+    }
+    
+
+    .vc .menu ul a:hover {
+        background-color: rgb(215, 215, 215);
+        border-radius: 7px;
+        /* border-bottom: 2px solid black; */
+    }
+
+    .vc .whole .form h6 {
+        margin: 1.8rem 4rem;
+    }
+
+    .vc .whole .form input {
+        margin-left: 1rem;
+    }
+
+    .navbar {
+        margin-top: -0.5rem;
+
+
+    }
+
+    .demo {
+    position: relative;
+    top: 4px;
+
+        border: 1px solid black;
+        width: 2rem;
+        height: 2rem;
+        background-color: rgb(99, 216, 114);
+        color: white;
+        text-align: right;
+        border-right: none;
+        padding-right: -2rem;
+        border-radius: 4px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px
+    }
+
+    .score .fri {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* border: 1px solid black; */
+
+
+
+    }
+
+    .score {
+        margin-top: 2rem;
+        background-color: #0084d6;
+        border-radius: 8px;
+        display: none;
+    }
+
+    .score .fri div {
+        width: 11rem;
+        border: 1px solid black;
+        background-color: rgb(206, 231, 244);
+        padding: 0.5rem;
+    }
+
+    .score .fri div:hover {
+        background-color: rgb(200, 220, 231)
+    }
+
+    .score .fri div h2,
+    p {
+        text-align: center;
+    }
+
+
+    .navbar .container-fluid {
+        /* border: 1px solid black; */
+        height: 4rem;
+        box-shadow: 2px 1px 6px black;
+        ;
+    }
+
+    .collapse .dropdown:hover ul {
+        display: block;
+
+    }
+
+    .collapse .dropdown div li a {
+        text-decoration: none;
+        color: black;
+        /* margin-left: 1rem; */
+    }
+
+    .collapse .dropdown div li a:hover {
+        color: blue;
+    }
+
+    .collapse .dropdown .rrr li :hover {
+        color: blue;
+        /* background-color: gainsboro; */
+        /* width: min-content; */
+
+    }
+
+    .collapse .dropdown #vo {
+        margin-top: 0.5rem;
+    }
+
+    .collapse .dropdown #add li {
+        margin-left: 2rem;
+    }
+
+    .collapse .dropdown #add {
+        width: 11rem;
+        background-color: gainsboro;
+        margin-top: -1rem;
+    }
+
+    .collapse .dropdown .rrr {
+        width: 11rem;
+
+    }
+
+    .collapse .dropdown .rrr li {
+        margin-left: 2rem;
+
+    }
+
+    .dropdown ul .main {
+        width: 25rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 21rem;
+    }
+
+    .dropdown ul .box {
+        margin-left: 16rem;
+    }
+
+    .dropdown ul .main .yog {
+        /* overflow-y: scroll; */
+        overflow-y: scroll;
+        width: 28rem;
+        /* height: 20rem; */
+    }
+
+    .navbar .container-fluid {
+        /* max-width: 200rem */
+        padding-right: 6rem;
+    }
+
+    .vertical {
+        border-left: 6px solid blue;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+    }
+
+    .dropdown ul .main .yog input {
+        width: 26rem;
+        height: 2rem;
+        border-radius: 12px;
+
+    }
+
+    .dropdown ul .main .yog h5 a {
+        text-decoration: none;
+    }
+
+    .dropdown #bn {
+        width: 37rem;
+        margin-left: -18rem;
+
+    }
+
+    .vc .vb {
+        font-weight: 340;
+        height: fit-content;
+    }
+
+    .vc .vb a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .vc {
+        /* margin-top: 276rem; */
+        height: fit-content;
+        /* background-color: antiquewhite; */
+        margin: 1rem 10rem;
+        box-shadow: 1px 4px 7px black;
+        padding-right: -2rem;
+        border-radius: 12px;
+
+
+    }
+
+    .vc #sub {
+        margin-top: 1.3rem;
+    }
+
+    .vc .dict1 .gri .cl {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.2rem
+    }
+
+    .vc .dict1 .gri .cl .card {
+        display: block;
+    }
+
+    .vc .dict1 .gri span {
+        background-color: #0084d6;
+
+    }
+
+    .vc .gri h2 {
+        margin-top: 2rem;
+    }
+
+    .vc .dict1 .gri span a {
+        color: aliceblue;
+        text-decoration: none;
+
+
+    }
+
+    .vc .dict1 .gri {
+        width: 57rem;
+    }
+
+    .vc .dict1 .gri span img {
+        width: 1.4rem;
+        position: relative;
+        float: right;
+        /* color: aliceblue; */
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+
+    .vc .dict1 .gri span .hide {
+        display: none;
+    }
+
+    .vc .dict1 .gri span .hide1 {
+        display: none;
+    }
+
+    .vc .dict1 .gri span .hide2 {
+        display: none;
+    }
+
+    .vc .dict1 .gri span .show {
+        display: block;
+    }
+
+    .vc .dict1 .gri span .show1 {
+        display: block;
+    }
+
+    .vc .dict1 .gri span .show2 {
+        display: block;
+    }
+
+    .vc .dict1 .gri h2 {
+        font-size: 1.6rem;
+        background-color: #0084d6;
+        color: aliceblue;
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .vc .dict1 .gri .card {
+        height: 17rem;
+        width: 15rem;
+        /* font-size: 3rem; */
+    }
+
+    .vc .dict1 .gri .card h6 {
+
+        font-size: 13px;
+    }
+
+    .vc .huge {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+        /* border-radius: 12px; */
+    }
+
+    .vc .huge .dict2 {
+        font-size: 1rem;
+        margin-top: 1rem;
+        font-weight: 500;
+        /* margin-right: 6rem; */
+        /* margin-right: 1.3rem; */
+    }
+
+    .vc .huge .dict2 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .vc .huge .dict2 div {
+        width: 15rem;
+        margin-right: 2rem;
+    }
+
+    .vc .huge .dict2 p {
+        margin-right: 90px;
+        font-size: 13px;
+        font-weight: 400;
+        position: relative;
+        left: 3.2rem;
+
+
+
+    }
+
+    .vc .gri .overlay {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vc .gri .overlay::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* top: 0%; */
+        top: 100%;
+        z-index: 1;
+        background-color: rgb(65, 68, 74);
+        opacity: 0.5;
+
+    }
+
+    .vc .gri .overlay:hover:before {
+        /* left: 10%; */
+        transition: 1.2s;
+        transform: scale(4);
+    }
+
+    .vc .gri .overlay .icon i {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        top: 5rem;
+        /* font-size: 12rem; */
+        z-index: 1;
+        display: none;
+    }
+
+    .vc .gri .overlay:hover .icon i {
+        display: block;
+    }
+
+    .vc .huge .dict1 {
+        margin-left: 1rem;
+    }
+
+    .vc h4 {
+        padding-left: 2rem;
+        height: 4rem;
+        padding-top: 1rem;
+        /* background-color: rgb(72, 158, 192); */
+        background-color: #0084d6;
+        color: aliceblue;
+    }
+
+    .vb .no {
+        background-color: white;
+    }
+
+    .vb div {
+        margin-bottom: -1rem;
+    }
+
+    .vb.pop {
+        margin: 3rem 0rem;
+    }
+
+    .vb h5 {
+        margin: 12px 0rem;
+        background-color: rgb(238, 238, 238);
+        padding: 0.7rem;
+        width: 90%;
+        border-radius: 12px;
+    }
+
+    #god {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0rem 2rem;
+        height: 52rem;
+        margin-top: 2rem;
+    }
+
+    #god .vb p {
+        padding-right: 3rem;
+    }
+
+    #god img {
+        width: 80%;
+        border-radius: 11px;
+    }
+
+    #god .vb {
+        width: 50rem;
+    }
+</style>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <div class="container-fluid">
+            <img src="/images/circle-of-hope-inc-charitable-organization-logo-non-profit-organisation-png-favpng-htywHbdaT2tFj8Xgm8SGa0mYv-removebg-preview.png"
+                alt="" srcset="">
+            <h3 style="padding-left: 6rem;"><span style="color: #0084d6;">Boss Beauties</span> <span
+                    style="color: orange;">Academy</span> </h3>
+            <!-- <a class="navbar-brand" href="#">Animal Kingdom</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg">
+                     <section id="localStorageTest" class="demo">
+                                <span class="clickCount">0</span></button>
+                                
+                            </section>
+                    </div><span
+                        style="border: 1px solid black;padding-left: -150px;border-left: none;width:4rem;height: 2rem;background-color: rgb(99, 216, 114);border-radius: 4px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;color: white;text-align: center;">POINTS</span>
+
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            JMEDIA | LEARNER
+                        </a>
+
+                        <ul id="vo" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div id="add">
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Administrator </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Instructor </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Learner </a> </span>
+                                </li>
+
+                            </div>
+
+                            <div class="rrr">
+                                <li>
+
+                                    <span><i class="fa-solid fa-user"></i> <a href="/info">My info </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-book"></i></i> <a href="/cor">My courses </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-certificate"></i> <a href="">My certificate </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-arrow-trend-up"></i> <a href="">My progress </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-user-group"></i> <a href="">My group </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-sitemap"></i><a href="">My branches </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-file"></i></i> <a href="">My files </a> </span>
+                                </li>
+
+
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            MESSAGES
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="/services.html">Go to inbox</a></li>
+                            <li><a class="dropdown-item" href="/substance.html">Send message</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" style="margin: -0.5rem 0rem;" href="/skills.html">No
+                                    messages</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            HELP
+                        </a>
+
+                        <ul id="bn" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="main">
+                                <div class="tony">
+
+                                    <li><a class="dropdown-item" href="/services.html">Services</a></li>
+                                    <li><a class="dropdown-item" href="/substance.html">Substance Abuse</a></li>
+                                    <li><a class="dropdown-item" href="/skills.html">Skills Training</a></li>
+                                    <li><a class="dropdown-item" href="/services.html">Services</a></li>
+                                    <li><a class="dropdown-item" href="/substance.html">Substance Abuse</a></li>
+                                    <li><a class="dropdown-item" href="/skills.html">Skills Training</a></li>
+
+                                </div>
+                                <!-- <div class="vertical"></div> -->
+                                <div class="yog">
+                                    <input style="margin-bottom:2rem" type="search" name="value" id=""
+                                        placeholder="search knowledge base">
+                                    <div>
+                                        <h5> <a href="">Getting starting with Talent LMS</a> </h5>
+                                        <p>If you’re new to TalentLMS, you might need a little help starting out. To
+                                            get things moving, let’s walk you through your first steps and point you
+                                            to a few useful resources along the way.</p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to set prerequisites for a course</a> </h5>
+                                        <p> if you want “Advanced Features of TalentLMS” to be available to learners
+                                            only after they have completed “Getting Started with eLearning” and
+                                            “Content and TalentLMS”, then choose “Getting Started with eLearning”
+                                            and “Content and TalentLMS” as prerequisites). </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to use Postman to generate TalentLMS API code snippets
+                                                in various programming languages</a> </h5>
+                                        <p>Our developers have prepared a collection of TalentLMS API call samples
+                                            for the Postman app, to help you get familiar with our API and generate
+                                            code snippets in different programming languages. </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SCIM with Azure AD</a> </h5>
+                                        <p>Configuration D. Known issues & troubleshooting Let’s start! A. Features
+                                            The supported user provisioning features are: Push New Users: Users
+                                            created in Azure AD are added to TalentLMS automatically.</p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with Okta</a> </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an Okta account to handle
+                                            the sign-in process and provide your users’ credentials to TalentLMS.
+                                        </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with an LDAP identity provider</a>
+                                        </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an LDAP identity provider
+                                            (IdP) to handle the sign-in process and provide your users’ credentials
+                                            to TalentLMS. </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with OneLogin</a> </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an OneLogin account to
+                                            handle the sign-in process and provide your users’ credentials to
+                                            TalentLMS. </p>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+                            <hr>
+                            <div class="box">
+                                <button type="button" class="btn btn-primary">Go to Knowledge Base</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        <a href="" style="margin-top: 0.5rem;color: black;"><i
+                                class="fa-solid fa-1.3x fa-arrow-right-to-bracket"></i></a>
+                    </form>
+
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div style="border-radius: 12px;" class="vc">
+
+        {{{body}}}
+    </div>
+
+
+
+</body>
+
+</html>

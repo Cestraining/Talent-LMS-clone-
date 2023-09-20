@@ -1,0 +1,214 @@
+<h4 style="border-top-left-radius: 12px;border-top-right-radius: 12px;"><a
+        style="color: aliceblue;text-decoration: none;" href="/">Home
+    </a><span> </span></h4>
+<div class="menu">
+    <ul>
+        <a href="/employee">
+            <li class="kl">Info</li>
+        </a>
+        <a href="/cor">
+            <li class="kl">Courses</li>
+        </a>
+        <a href="">
+            <li class="kl">Groups</li>
+        </a>
+        <a href="">
+            <li class="kl">Branches</li>
+        </a>
+        <a href="">
+            <li class="kl">Files</li>
+        </a>
+    </ul>
+
+    <div class="h" style="float: right;position: relative;top: -3.4rem;margin-right: 1rem;">
+        <a href="/employee"> <button>Profile</button></a>
+        <a href="/employee/list"> <button>Progress</button></a>
+        
+        <button>Infographic</button>
+    </div>
+</div>
+<hr style="margin-top: -0.8rem;">
+<div class="whole">
+
+    <form class="form" action="/employee" method="POST">
+        {{!-- <input type="hidden" name="_id" value="{{employee._id}}"> --}}
+        <h6><span>First Name</span><input type="text" id="fullName" name="fullName" required
+                value=" {{employee.fullname}}" placeholder="Enter your first name">
+
+            <div class="text-danger">
+                {{employee.fullnameError}}</div>
+        </h6>
+        <h6><span>Last Name</span><input type="text" id="lastName" required name="lastName"
+                value=" {{employee.lastname}}" placeholder="Enter your last name"></h6>
+        <h6><span style="margin-left: -1.4rem;">Email Address</span><input id="email" required name="email" type="email"
+                value="{{employee.email}}" placeholder="Enter your Address">
+            <div class="text-danger">
+                {{employee.fullnameError}}</div>
+        </h6>
+        <div class="photo" style="float:right;position: relative;top:-8.6rem">
+            <img style="width: 30%;" src="/images/default_user2x.webp" alt="" srcset="">
+            <div>Upload profile pic</div>
+            <div><input type="file" name="upload" id=""></div>
+        </div>
+
+        <h6><span>Username</span><input required name="username" id="username" value="{{employee.username}}" type="text" placeholder=>
+        </h6>
+       
+        <h6><span>Password</span><input required  name="password" readonly value="{{employee.password}}" id="password" type="text"
+                placeholder="Enter your Password"></h6>
+
+        <h6><span style="position: relative;top: -7rem;left: 3rem;">Bio</span><textarea name="bio"
+                value="{{employee.bio}}" style="position: relative;left: 3.6rem;" name="" id="" cols="70"
+                rows="6"></textarea></h6>
+        <h6><span>Time Zone</span><select name="" id="">
+                <option value="gmt">(GMT +07:00) Novosibirsk, Russia</option>
+                <option value="gmt">(GMT +07:00) Vietnam</option>
+                <option value="gmt">(GMT +08:00) Bejing,Shahangi, China</option>
+                <option value="gmt">(GMT +07:00) Jakarta, Indonesia</option>
+            </select></h6>
+        <h6><span>Language</span><select name="" id="">
+                <option value="gmt">English</option>
+                <option value="gmt">Netherlands(Dutch)</option>
+                <option value="gmt">Deutsh(German)</option>
+                <!-- <option value="gmt">(GMT +07:00) Jakarta, Indonesia</option> -->
+            </select></h6>
+        <h6>
+            <input type="checkbox" name="" id="" required><span style="margin: 0rem 4px;"> Exclude from emails</span><i
+                class="fa-solid fa-circle-info"></i>
+        </h6>
+        <hr>
+        <div class="jk" style="padding:2rem ;">
+            <button type="submit" class="btn btn-primary">Update User</button>or <a
+                style="text-decoration: none;color: black;margin-left: 0.4rem;" href="/">cancel</a>
+            <button class="btn btn-primary" style="float: right;">Reset</button>
+        </div>
+    </form>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+            // Initialize Local/Session Storage
+            ccInit();
+            // Local Storage Counter
+            $(".clickCounter").click(function () {
+                clickCounter("local");
+            });
+            // Local Storage Reset
+            $("#resetCounter").click(function () {
+                resetCounter("local");
+            });
+
+
+        });
+
+        function ccInit() {
+            if (typeof (Storage) !== "undefined") {
+                if (!localStorage.clickCount) {
+                    localStorage.clickCount = 0;
+                }
+                if (!sessionStorage.sessionCount) {
+                    sessionStorage.sessionCount = 0;
+                }
+                $(".clickCount").html(localStorage.clickCount);
+                $("#sessionStorageCount").html(sessionStorage.sessionCount)
+            } else {
+                $("p#outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+        // CLICK COUNTER
+        function clickCounter(storageType) {
+
+            if (typeof (Storage) !== "undefined") {
+                if (storageType == "local") {
+                    if (localStorage.clickCount) {
+                        localStorage.clickCount = parseInt(localStorage.clickCount) + 30;
+                    }
+                    else {
+                        localStorage.clickCount = 1;
+                    }
+                    $(".clickCount").html(localStorage.clickCount);
+                }
+                else if (storageType == "session") {
+                    if (sessionStorage.sessionCount) {
+                        sessionStorage.sessionCount = parseInt(sessionStorage.sessionCount) + 1;
+                    }
+                    else {
+                        sessionStorage.sessionCount = 1;
+                    }
+                    $("#sessionStorageCount").html(sessionStorage.sessionCount)
+                }
+
+            } else {
+                $("p.outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+
+
+    const form = document.querySelector(".form")
+    console.log(form[0].value)
+
+    const form1 = document.getElementById('fullName')
+    console.log(form1)
+    form1.value = localStorage.getItem("key"); // get and assign the value outside 
+    form1.onchange = function () {
+        const key = form1.value;
+        localStorage.setItem('key', key);
+    };
+    const form2 = document.getElementById('lastName')
+    console.log(form2)
+    form2.value = localStorage.getItem("key1"); // get and assign the value outside 
+    form2.onchange = function () {
+        const key1 = form2.value;
+        localStorage.setItem('key1', key1);
+    };
+    const form3 = document.getElementById('email')
+    console.log(form3)
+    form3.value = localStorage.getItem("key2"); // get and assign the value outside 
+    form3.onchange = function () {
+        const key2 = form3.value;
+        localStorage.setItem('key2', key2);
+    };
+    const form4 = document.getElementById('username')
+    console.log(form4)
+    form4.value = localStorage.getItem("key3"); // get and assign the value outside 
+    form4.onchange = function () {
+        const key3 = form4.value;
+        localStorage.setItem('key3', key3);
+    };
+    const form5 = document.getElementById('password')
+    console.log(form5)
+    form5.value = localStorage.getItem("key4"); // get and assign the value outside 
+    form5.onchange = function () {
+        const key4 = form5.value;
+        localStorage.setItem('key4', key4);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+<script src="/index.js"></script>
+
+</body>
+
+</html>

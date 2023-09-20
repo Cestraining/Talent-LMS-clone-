@@ -1,0 +1,355 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar {
+   margin-top: -0.5rem;
+
+
+}
+
+.demo{
+    position: relative;
+    top: 4.2px;
+    border: 1px solid black;
+    width: 3rem;
+    height: 2rem;
+    background-color: rgb(99, 216, 114);
+    color: white;
+    text-align: right;
+    border-right: none;
+    padding-right: -2rem;
+    border-radius: 4px;border-top-right-radius: 0px;border-bottom-right-radius: 0px
+}
+.score .fri{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* border: 1px solid black; */
+   
+    
+   
+}
+.score{
+    margin-top: 2rem;
+    background-color: #0084d6;
+    border-radius: 8px;
+    display: none;
+}
+.score .fri div{
+    width: 11rem;
+    border: 1px solid black;
+    background-color: rgb(206, 231, 244);
+    padding: 0.5rem;
+}
+.score .fri div:hover{
+    background-color: rgb(200, 220, 231)
+}
+.score .fri div h2,p{
+    text-align: center;
+}
+
+
+.navbar .container-fluid{
+    /* border: 1px solid black; */
+    height: 4rem;
+    box-shadow: 2px 1px 6px  black;;
+}
+.collapse .dropdown:hover ul{
+    display: block;
+
+}
+.collapse .dropdown div li a{
+    text-decoration: none;
+    color: black;
+    /* margin-left: 1rem; */
+}
+.collapse .dropdown div li a:hover{
+    color: blue;
+}
+.collapse .dropdown .rrr li :hover{
+    color: blue;
+    /* background-color: gainsboro; */
+    /* width: min-content; */
+    
+}
+#add{
+    margin: 0rem 1.2rem;
+}
+#add li a{
+    color: black;
+    text-decoration: none;
+}
+.rrr{
+    margin: 0rem 1.2rem;
+}
+.rrr li span a{
+    color: black;
+    text-decoration: none;
+
+}
+.rrr li span a:hover{
+   color: goldenrod;
+}
+.collapse .dropdown #vo{
+    margin-top: 0.5rem;
+}
+.collapse ul #vo #add li a{
+    text-decoration: none;
+}
+
+
+
+.collapse .dropdown #add li{
+    margin-left: 2rem;
+}
+.collapse .dropdown #add {
+    width: 11rem;
+    background-color: gainsboro;
+    margin-top: -1rem;
+}
+.collapse .dropdown .rrr {
+    width: 11rem;
+    
+}
+.collapse .dropdown .rrr li{
+    margin-left: 2rem;
+    
+}
+.dropdown ul .main{
+    width: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 21rem;
+}
+.dropdown ul .box{
+    margin-left: 16rem;
+}
+.dropdown ul .main .yog{
+   /* overflow-y: scroll; */
+   overflow-y: scroll;
+   width: 28rem;
+   /* height: 20rem; */
+}
+.navbar .container-fluid{
+    /* max-width: 200rem */
+    padding-right: 6rem;
+}
+.vertical {
+    border-left: 6px solid blue;
+    height: 200px;
+    position:absolute;
+    left: 50%;
+  }
+.dropdown ul .main .yog input{
+    width: 26rem;
+    height: 2rem;
+    border-radius: 12px;
+    
+}
+.dropdown ul .main .yog h5 a{
+    text-decoration: none;
+}
+.dropdown #bn{
+    width: 37rem;
+    margin-left: -18rem;
+    
+}
+.vc .vb{
+    font-weight: 340;
+    height: fit-content;
+}
+.vc .vb a{
+    text-decoration: none;
+    color: black;
+}
+
+.vc{
+   /* margin-top: 276rem; */
+    height: fit-content;
+    /* background-color: antiquewhite; */
+    margin: 1rem 10rem;
+    box-shadow: 1px  4px 7px  black;
+    padding-right: -2rem;
+    border-radius: 12px;
+
+   
+}
+.vc #sub{
+    margin-top: 1.3rem;
+}
+.vc .dict1 .gri .cl{
+   
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1.2rem
+    
+}
+.vc .dict1 .gri .cl .card{
+   display: block;
+}
+.vc .dict1 .gri span{
+    background-color: #0084d6;
+   
+}
+.vc .gri h2{
+    margin-top: 2rem;
+}
+.vc .dict1 .gri span a{
+    color: aliceblue;
+    text-decoration: none;
+    
+   
+}
+.vc .dict1 .gri{
+    width: 57rem;
+}
+
+.vc .dict1 .gri span img{
+    width: 1.4rem;
+    position: relative;
+    float: right;
+    /* color: aliceblue; */
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.vc .dict1 .gri span .hide{
+   display: none;}
+.vc .dict1 .gri span .hide1{
+   display: none;}
+.vc .dict1 .gri span .hide2{
+   display: none;}
+.vc .dict1 .gri span .show{
+   display: block;}
+.vc .dict1 .gri span .show1{
+   display: block;}
+.vc .dict1 .gri span .show2{
+   display: block;}
+
+.vc .dict1 .gri h2{
+    font-size: 1.6rem;
+    background-color: #0084d6;
+    color: aliceblue;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+.vc .dict1 .gri .card{
+    height: 17rem;
+    width: 15rem;
+    /* font-size: 3rem; */
+}
+.vc .dict1 .gri .card h6{
+    
+    font-size: 13px;
+}
+.vc .huge{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:3rem;
+    /* border-radius: 12px; */
+}
+
+.vc .huge .dict2{
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    /* margin-right: 6rem; */
+    /* margin-right: 1.3rem; */
+}
+.vc .huge .dict2 a{
+    text-decoration: none;
+    color: black;
+}
+.vc .huge .dict2 div{
+    width: 15rem;
+    margin-right: 2rem;
+}
+.vc .huge .dict2 p{
+    margin-right: 90px;
+    font-size: 13px;
+    font-weight: 400;
+    position: relative;
+    left: 3.2rem;
+    
+
+
+}
+.vc .gri .overlay{
+    position: relative;
+    overflow: hidden;
+}
+.vc .gri .overlay::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0%; */
+    top: 100%;
+    z-index: 1;
+    background-color: rgb(65, 68, 74);
+    opacity: 0.5;
+    
+}
+.vc .gri .overlay:hover:before{
+    /* left: 10%; */
+    transition: 1.2s;
+    transform: scale(4);
+}
+.vc .gri .overlay .icon i{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    top: 5rem;
+    /* font-size: 12rem; */
+    z-index: 1;
+    display: none;
+}
+.vc .gri .overlay:hover .icon i{
+    display: block;
+}
+.vc .huge .dict1{
+    margin-left:1rem;
+}
+.vc h4{
+    padding-left: 2rem;
+    height: 4rem;
+    padding-top: 1rem;
+    /* background-color: rgb(72, 158, 192); */
+    background-color: #0084d6;
+    color: aliceblue;
+}
+.vb .no{
+    background-color: white;
+}
+
+.vb div{
+    margin-bottom: -1rem;
+}
+.vb.pop{
+    margin: 3rem 0rem;
+}
+.vb h5{
+    margin: 12px 0rem;
+    background-color:rgb(238, 238, 238); 
+    padding: 0.7rem;
+    width: 90%;
+    border-radius: 12px;
+}
+#god {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0rem 2rem;
+    height: 52rem;
+    margin-top: 2rem;
+}
+#god .vb p{
+    padding-right:3rem ;
+}
+#god img{
+    width: 80%;
+    border-radius: 11px;
+}
+#god .vb{
+    width: 50rem;
+}

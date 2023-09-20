@@ -1,0 +1,132 @@
+<h4 style="border-top-left-radius: 12px;border-top-right-radius: 12px;"><a
+        style="color: aliceblue;text-decoration: none;"
+        href="/">Home  {{employee.firstName}}{{employee.lastName}}</a><span></span></h4>
+<div class="menu">
+    <ul>
+        <a href="/employee/list">
+            <li class="kl">Overview</li>
+        </a>
+        <a href="/cor">
+            <li class="kl">Courses</li>
+        </a>
+        <a href="">
+            <li class="kl">Certificates</li>
+        </a>
+        <a href="">
+            <li class="kl">Batches</li>
+        </a>
+        <a href="">
+            <li class="kl">Certificates</li>
+        </a>
+    </ul>
+
+    <div class="h" style="float: right;position: relative;top: -3.4rem;margin-right: 1rem;">
+        <button> <a style="text-decoration: none;color:black"  href="/employee">Profile</a> </button>
+        <button> <a style="text-decoration: none;color:black" href="">Progress</a></button>
+        <button> <a style="text-decoration: none;color:black" href="">Infographic</a></button>
+    </div>
+</div>
+<hr style="margin-top: -0.8rem;">
+
+<div class="container">
+    <div class="set" style="display: flex;font-size:1.3rem">
+        <div>
+
+        <img style="width: 60%;" src="/images/default_user2x.webp" alt="">
+        </div>
+        <div>
+
+        {{#each list}}
+        {{!-- <h1>hi</h1> --}}
+        <div class="first" style="margin-left: -2rem;"> 
+            <h3 style="margin-bottom: -1.4rem;">{{this.fullName}}  {{this.lastName}}</h3>   <br> {{this.email}}</div>
+        
+         {{/each}}
+        </div>
+    </div>
+
+     <div class="score" style="display: block;">
+                    <div class="fri">
+                        <div class="c1" style="border-top-left-radius:8px ;border-bottom-left-radius: 8px;">
+                            <h2>7</h2>
+                            <p>courses in progress</p>
+                        </div>
+                        <div class="c2">
+                            <h2>0</h2>
+                            <p>completed courses</p>
+                        </div>
+                        <div class="c3">
+                            <h2>11h 25m</h2>
+                            <p>training time</p>
+                        </div>
+                        <div class="c4" >
+                            <h2>7</h2>
+                            <p>bactches</p>
+                        </div>
+                        <div  class="c5 " style="border-top-right-radius:8px ;border-bottom-right-radius: 8px;">
+
+                            <h2 class="clickCount">0</h2>
+                            <p>points</p>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+<script>
+     $(document).ready(function () {
+            // Initialize Local/Session Storage
+            ccInit();
+            // Local Storage Counter
+            $(".clickCounter").click(function () {
+                clickCounter("local");
+            });
+            // Local Storage Reset
+            $("#resetCounter").click(function () {
+                resetCounter("local");
+            });
+
+
+        });
+
+        function ccInit() {
+            if (typeof (Storage) !== "undefined") {
+                if (!localStorage.clickCount) {
+                    localStorage.clickCount = 0;
+                }
+                if (!sessionStorage.sessionCount) {
+                    sessionStorage.sessionCount = 0;
+                }
+                $(".clickCount").html(localStorage.clickCount);
+                $("#sessionStorageCount").html(sessionStorage.sessionCount)
+            } else {
+                $("p#outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+        // CLICK COUNTER
+        function clickCounter(storageType) {
+
+            if (typeof (Storage) !== "undefined") {
+                if (storageType == "local") {
+                    if (localStorage.clickCount) {
+                        localStorage.clickCount = parseInt(localStorage.clickCount) + 30;
+                    }
+                    else {
+                        localStorage.clickCount = 1;
+                    }
+                    $(".clickCount").html(localStorage.clickCount);
+                }
+                else if (storageType == "session") {
+                    if (sessionStorage.sessionCount) {
+                        sessionStorage.sessionCount = parseInt(sessionStorage.sessionCount) + 1;
+                    }
+                    else {
+                        sessionStorage.sessionCount = 1;
+                    }
+                    $("#sessionStorageCount").html(sessionStorage.sessionCount)
+                }
+
+            } else {
+                $("p.outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+</script>
