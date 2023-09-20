@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    .para {
+        display: none;
+    }
+
+    .accordion-button::after {
+        background: none;
+    }
+
+    #god{
+        height: fit-content;
+    }
+
+    .accordion-item:last-of-type .accordion-button.collapsed {
+        display: block;
+        width: 20%;
+        margin: auto;
+    }
+
+    .accordion-flush .accordion-item .accordion-button {
+        display: block;
+        width: 20%;
+        margin: auto;
+    }
+
+    .accordion-button:not(.collapsed) {
+        /* color: aliceblue; */
+        border-color: aliceblue;
+    }
+
+    .accordion-button:focus {
+        border-color: aliceblue;
+        background-color: aliceblue;
+    }
+</style>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <div class="container-fluid">
+            <img src="/images/circle-of-hope-inc-charitable-organization-logo-non-profit-organisation-png-favpng-htywHbdaT2tFj8Xgm8SGa0mYv-removebg-preview.png"
+                alt="" srcset="">
+            <h3 style="padding-left: 6rem;"><span style="color: #0084d6;">Boss Beauties</span> <span
+                    style="color: orange;">Academy</span> </h3>
+            <!-- <a class="navbar-brand" href="#">Animal Kingdom</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg">
+                    <section id="localStorageTest" class="demo">
+                        <span id="clickCount">0</span></button>
+
+                    </section>
+                    </div><span style="border: 1px solid black;padding-left: -150px;border-left: none;width:4rem;height: 2rem;background-color: rgb(99, 216, 114);border-radius: 4px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;color: white;text-align: center;">POINTS</span>
+
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            JMEDIA | LEARNER
+                        </a>
+
+                        <ul id="vo" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div id="add">
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Administrator </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Instructor </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><input type="checkbox" name="boss" id=""> <a href="">Learner </a> </span>
+                                </li>
+
+                            </div>
+
+                            <div class="rrr">
+                                <li>
+
+                                    <span><i class="fa-solid fa-user"></i> <a href="">My info </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-book"></i></i> <a href="">My courses </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-certificate"></i> <a href="">My certificate </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-arrow-trend-up"></i> <a href="">My progress </a>
+                                    </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-user-group"></i> <a href="">My group </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-sitemap"></i><a href="">My branches </a> </span>
+                                </li>
+                                <li>
+
+                                    <span><i class="fa-solid fa-file"></i></i> <a href="">My files </a> </span>
+                                </li>
+
+
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            MESSAGES
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="/services.html">Go to inbox</a></li>
+                            <li><a class="dropdown-item" href="/substance.html">Send message</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" style="margin: -0.5rem 0rem;" href="/skills.html">No
+                                    messages</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown" style="margin-top: 0.2rem; color:black">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            HELP
+                        </a>
+
+                        <ul id="bn" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="main">
+                                <div class="tony">
+
+                                    <li><a class="dropdown-item" href="/services.html">Services</a></li>
+                                    <li><a class="dropdown-item" href="/substance.html">Substance Abuse</a></li>
+                                    <li><a class="dropdown-item" href="/skills.html">Skills Training</a></li>
+                                    <li><a class="dropdown-item" href="/services.html">Services</a></li>
+                                    <li><a class="dropdown-item" href="/substance.html">Substance Abuse</a></li>
+                                    <li><a class="dropdown-item" href="/skills.html">Skills Training</a></li>
+
+                                </div>
+                                <!-- <div class="vertical"></div> -->
+                                <div class="yog">
+                                    <input style="margin-bottom:2rem" type="search" name="value" id=""
+                                        placeholder="search knowledge base">
+                                    <div>
+                                        <h5> <a href="">Getting starting with Talent LMS</a> </h5>
+                                        <p>If you’re new to TalentLMS, you might need a little help starting out. To
+                                            get things moving, let’s walk you through your first steps and point you
+                                            to a few useful resources along the way.</p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to set prerequisites for a course</a> </h5>
+                                        <p> if you want “Advanced Features of TalentLMS” to be available to learners
+                                            only after they have completed “Getting Started with eLearning” and
+                                            “Content and TalentLMS”, then choose “Getting Started with eLearning”
+                                            and “Content and TalentLMS” as prerequisites). </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to use Postman to generate TalentLMS API code snippets
+                                                in various programming languages</a> </h5>
+                                        <p>Our developers have prepared a collection of TalentLMS API call samples
+                                            for the Postman app, to help you get familiar with our API and generate
+                                            code snippets in different programming languages. </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SCIM with Azure AD</a> </h5>
+                                        <p>Configuration D. Known issues & troubleshooting Let’s start! A. Features
+                                            The supported user provisioning features are: Push New Users: Users
+                                            created in Azure AD are added to TalentLMS automatically.</p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with Okta</a> </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an Okta account to handle
+                                            the sign-in process and provide your users’ credentials to TalentLMS.
+                                        </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with an LDAP identity provider</a>
+                                        </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an LDAP identity provider
+                                            (IdP) to handle the sign-in process and provide your users’ credentials
+                                            to TalentLMS. </p>
+
+                                    </div>
+                                    <div>
+                                        <h5> <a href="">How to configure SSO with OneLogin</a> </h5>
+                                        <p>Note: Single sign-on is available with the Basic, Plus and Premium
+                                            subscription plans. To get started, you need an OneLogin account to
+                                            handle the sign-in process and provide your users’ credentials to
+                                            TalentLMS. </p>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+                            <hr>
+                            <div class="box">
+                                <button type="button" class="btn btn-primary">Go to Knowledge Base</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        <a href="" style="margin-top: 0.5rem;color: black;"><i
+                                class="fa-solid fa-1.3x fa-arrow-right-to-bracket"></i></a>
+                    </form>
+
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="vc">
+
+        <h4 style="border-top-left-radius: 12px;border-top-right-radius: 12px;">Home</h4>
+        <div style="border-radius: 12px;" id="god">
+            <div class="video" style="display: flex ;flex-direction: column;">
+                <img src="/images/1641923512_Boss_Beauties_logo1.png" alt="" srcset="">
+
+                <a href=""> <button type="button" style="width: 80%; margin-top: 1rem;" class="btn btn-primary">Resume
+                        course</button></a>
+
+            </div>
+            <div class="vb">
+                <div class="progress" style="width:5rem;position:relative;left:42rem;top:2.5rem">
+                    <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="25" aria-valuemin="4"
+                        aria-valuemax="100">0%</div>
+                </div>
+                <h3>BOSS BEAUTIES® FINANCIAL LITERACY TRAINING BEGINNER COURSE</h3>
+                <p>Mission Statement
+                    We are extremely excited to present to you the Boss Beauties® Academy! This virtual education
+                    platform is a safe and non-judgemental place to learn financial literacy. Our proprietary curriculum
+                    was designed to educate students from Beginning - Advanced levels of learning. <br>
+                    <br>
+                    Prepare for Success
+                    Master essential finance-related topics from financial responsibility, budgeting, and investing in
+                    real estate- with our self-paced courses built by those who value a quality education, and those who
+                    are passionate about
+                    delivering it to underserved individuals.
+                    <br>
+                    <!-- <h6 style="display: block; width: 100%; text-align: center;cursor: pointer;" onclick="open()">Read more -->
+                    </h6>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Read More
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Vision/Value Statement <br> <br>
+                                The vision that guides our collective endeavors is of a society in which women of color
+                                are afforded genuine opportunities to thrive and achieve financial freedom regardless of
+                                their circumstances or location. In upholding our vision, we believe that the
+                                development of the field of financial literacy must be guided by an unwavering
+                                commitment to excellence, equity, and access. <br><br>
+
+                                The following commitments will guide this program's pursuit of excellence. <br>
+
+                                Student-centered Approach: <br>
+                                - Student support is intensive and individualized. <br>
+                                - Program design is dynamic and responsive. <br>
+                                - Program accommodates students' different learning styles and specific needs. <br>
+                                - Program articulates the course of study with long-term pathways to further education .
+                                <br>
+                                - Program seeks and integrates student input into the program. <br>
+                                - Students have opportunities to cultivate social, professional and leadership skills.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </p>
+                <h5>Content</h5>
+                <h5 style="margin-bottom: -0.2rem;" class="no">OUR MONEY MATTERS</h5>
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1: Our Money Matters
+                    </div>
+                </a>
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Lesson Guide - Financial Responsibility
+                    </div>
+                </a>
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Survey Questions Part 1
+                    </div>
+                </a>
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Video: Financial Responsibility
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Student Activity Sheet #1: Learning the Language of Money
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Survey Questions Part 2
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Video: How to be Financially Responsible
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Student Activity Sheet #2: It’s Your Turn: What Would You Do?
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        L1 Reflection
+                    </div>
+                </a>
+                
+
+                <h5 style="margin-bottom: -0.2rem;" class="no">L2: DREAM IN COLOR: LINKING MONEY TO YOUR GOALS</h5>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>What is
+                        Employee Training?
+                    </div>
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>Benefits
+                        of Employee Training
+                    </div>
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>How to
+                        Set Up an Employee Training Plan
+                    </div>
+                </a>
+                <h5 style="margin-bottom: -0.2rem; margin-top: 1.3rem;" class="no">BASIC TYPES OF EMPLOYEE TRAINING</h5>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;"
+                            class="  fa-solid fa-chalkboard"></i></i>Onboarding
+                    </div>
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;"
+                            class="  fa-solid fa-chalkboard"></i></i>Complience
+                    </div>
+                </a>
+
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>Technical
+                        Skills Development
+                    </div>
+                </a>
+
+                <h5 style="margin-bottom: -0.2rem; margin-top: 1.3rem;" class="no">EVALUATION</h5>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>How Can
+                        an LMS Help with Assessments?
+                    </div>
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>How to
+                        Phrase Employee Evaluation Comments
+                </a>
+                <h5 style="margin-bottom: -0.2rem; margin-top: 1.3rem;" class="no">THE POWER OF EMPLOYEE TRAINING</h5>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>
+                        One Company, One Platform, Multiple Training Types
+                    </div>
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>Training
+                        a Workforce of 1,200
+                </a>
+                <a href="">
+
+                    <div>
+
+                        <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>Employee
+                        Training in Complex Organizations
+                </a>
+
+
+
+                <h5 style="margin-top: 2rem;">COMPLETION RULES</h5>
+
+                <a href="">
+
+                </a>
+                <div>
+
+                    <i style="padding: 1rem;border-radius: 2rem;" class="  fa-solid fa-chalkboard"></i></i>All units
+                    must be completed
+                </div>
+
+
+
+                <hr style="margin-top: 3rem;">
+                <div style="margin-top: 1rem;" class="pop">
+
+                    <a style="text-decoration: none;color: black;" href="/index.html"><i
+                            style="text-decoration: none;color: black;" class="fa-solid fa-chevron-left"></i>Back</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+         $(document).ready(function () {
+            // Initialize Local/Session Storage
+            ccInit();
+            // Local Storage Counter
+            $("#clickCounter").click(function () {
+                clickCounter("local");
+            });
+            // Local Storage Reset
+            $("#resetCounter").click(function () {
+                resetCounter("local");
+            });
+
+
+        });
+
+        function ccInit() {
+            if (typeof (Storage) !== "undefined") {
+                if (!localStorage.clickCount) {
+                    localStorage.clickCount = 0;
+                }
+                if (!sessionStorage.sessionCount) {
+                    sessionStorage.sessionCount = 0;
+                }
+                $("#clickCount").html(localStorage.clickCount);
+                $("#sessionStorageCount").html(sessionStorage.sessionCount)
+            } else {
+                $("p#outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+        // CLICK COUNTER
+        function clickCounter(storageType) {
+
+            if (typeof (Storage) !== "undefined") {
+                if (storageType == "local") {
+                    if (localStorage.clickCount) {
+                        localStorage.clickCount = parseInt(localStorage.clickCount) + 30;
+                    }
+                    else {
+                        localStorage.clickCount = 1;
+                    }
+                    $("#clickCount").html(localStorage.clickCount);
+                }
+                else if (storageType == "session") {
+                    if (sessionStorage.sessionCount) {
+                        sessionStorage.sessionCount = parseInt(sessionStorage.sessionCount) + 1;
+                    }
+                    else {
+                        sessionStorage.sessionCount = 1;
+                    }
+                    $("#sessionStorageCount").html(sessionStorage.sessionCount)
+                }
+
+            } else {
+                $("p.outputText").html("Your browser doesn't support Local Storage");
+            }
+        }
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
+
+
+
+
+</body>
